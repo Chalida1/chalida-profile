@@ -12,34 +12,32 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 function Aboutme() {
   return (
-    <Box sx={{ backgroundColor: "#f0f9ff", py: 8 }}>
+    <Box sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 10 }}>
       <Container maxWidth="md">
-        <Grid
-          container
-          spacing={4}
-          
-          alignItems="flex-start"
-        >
-          {/* ฝั่งซ้าย: ข้อความ */}
+        <Grid container spacing={4} alignItems="flex-start">
           <Grid item xs={12} md={6}>
             <Typography
               variant="h3"
               fontWeight="bold"
-              justifyContent="space-between"
-              sx={{ mb: 3, textTransform: "uppercase" }}
+              sx={{ mb: 3, textTransform: "uppercase", color: "#00b0ff" }}
             >
               About Me
             </Typography>
 
-            <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8 }}>
-              ดิฉันเป็นผู้เริ่มต้นเส้นทางด้านการพัฒนาเว็บไซต์ โดยมีความสนใจเฉพาะทางด้าน Front-End <br />
-              และกำลังมองหาโอกาสในการทำงานที่ท้าทายและน่าตื่นเต้น
-              <br /><br />
-              ให้ความสำคัญกับเรื่องการเข้าถึง (Accessibility) เมื่อพัฒนาเว็บไซต์
-              และมีความกระตือรือร้นในการเรียนรู้สิ่งใหม่ ๆ
-              รวมถึงการแก้ปัญหาที่เกิดขึ้นระหว่างการเขียนโปรแกรม
-              ปัจจุบันกำลังศึกษา React.js และเริ่มเรียนรู้การออกแบบเว็บไซต์เบื้องต้น
-              พร้อมทั้งพัฒนาทักษะเพิ่มเติมอย่างต่อเนื่องอย่างสม่ำเสมอ
+            <Typography
+              variant="body1"
+              sx={{ mb: 4, lineHeight: 1.8, color: "#444" }}
+            >
+              ดิฉันสำเร็จการศึกษาจากสาขาระบบสารสนเทศเพื่อธุรกิจดิจิทัล
+              มหาวิทยาลัยเอเชียอาคเนย์ <br />
+              มีความสนใจในสายงานพัฒนา Software โดยเฉพาะ Web Development ทั้ง
+              Frontend และ Backend
+              <br />
+              <br />
+              จากโครงงานระหว่างเรียนได้พัฒนาระบบจองคอร์สปฏิบัติธรรม (Back-End)
+              ด้วย PHP และ MySQL พร้อมออกแบบ Flowchart และระบบกำหนดสิทธิ์ผู้ใช้
+              ดิฉันพร้อมเรียนรู้เทคโนโลยีใหม่ ๆ ปรับตัวได้ดี
+              และมีความมุ่งมั่นที่จะพัฒนาทักษะเพื่อเติบโตในสายงานนี้
             </Typography>
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -47,12 +45,12 @@ function Aboutme() {
                 variant="contained"
                 endIcon={<ArrowForwardIcon />}
                 sx={{
-                  backgroundColor: "#d5fd35",
-                  color: "#000",
+                  backgroundColor: "#00b0ff",
+                  color: "#fff",
                   borderRadius: "30px",
                   px: 3,
                   fontWeight: "bold",
-                  "&:hover": { backgroundColor: "#b9e529" },
+                  "&:hover": { backgroundColor: "#0081b3" },
                 }}
               >
                 Download Resume
@@ -61,21 +59,28 @@ function Aboutme() {
               <IconButton
                 href="https://linkedin.com"
                 target="_blank"
-                sx={{ backgroundColor: "#111", color: "#d5fd35" }}
+                sx={{
+                  backgroundColor: "#00b0ff",
+                  color: "#fff",
+                  "&:hover": { backgroundColor: "#0081b3" },
+                }}
               >
                 <LinkedInIcon />
               </IconButton>
               <IconButton
                 href="https://github.com"
                 target="_blank"
-                sx={{ backgroundColor: "#111", color: "#d5fd35" }}
+                sx={{
+                  backgroundColor: "#222",
+                  color: "#fff",
+                  "&:hover": { backgroundColor: "#444" },
+                }}
               >
                 <GitHubIcon />
               </IconButton>
             </Box>
           </Grid>
 
-          {/* ฝั่งขวา: รูป */}
           <Grid item xs={12} md={6}>
             <Box
               sx={{
@@ -83,6 +88,11 @@ function Aboutme() {
                 borderRadius: 2,
                 overflow: "hidden",
                 width: "100%",
+                transition: "transform 0.3s, box-shadow 0.3s",
+                "&:hover": {
+                  transform: "scale(1.03)",
+                  boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
+                },
               }}
             >
               <Box
