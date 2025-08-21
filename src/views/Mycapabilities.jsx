@@ -1,90 +1,122 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Chip from "@mui/material/Chip";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
+import { Box, Typography, Grid, Container, Paper, Chip } from "@mui/material";
 
-const skills = [
-  "PHP",
-  "JavaScript",
-  "Node.js",
-  "RESTful APIs",
-  "React.js",
-  "Tailwind CSS",
-  "HTML",
-  "Front End",
-  "Back End",
-  "MySQL",
-  "Database",
-  "Tools & Platforms",
-  "Git",
-  "Figma",
-  "Flutter",
-];
+const skillGroups = {
+  Frontend: [
+    { name: "HTML", level: "Intermediate" },
+    { name: "JavaScript", level: "Beginner" },
+    { name: "React.js", level: "Intermediate" },
+    { name: "Tailwind CSS", level: "Intermediate" },
+  ],
+  Backend: [
+    { name: "PHP", level: "Intermediate" },
+    { name: "Node.js", level: "Beginner" },
+    { name: "RESTful APIs", level: "Beginner" },
+    { name: "MySQL", level: "Intermediate" },
+  ],
+  "Tools & Platforms": [
+    { name: "Git", level: "Intermediate" },
+    { name: "Figma", level: "Beginner" },
+  ],
+  "Mobile & Others": [{ name: "Flutter", level: "Beginner" }],
+};
+
+// สีตามระดับ
+const levelColors = {
+  Beginner: { borderColor: "#fbc02d", color: "#f57f17" }, // เหลือง
+  Intermediate: { borderColor: "#4caf50", color: "#1b5e20" }, // เขียว
+  Advanced: { borderColor: "#2196f3", color: "#0d47a1" }, // น้ำเงิน
+};
 
 export default function Mycapabilities() {
   return (
-    <Box sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 12, color: "#000" }}>
+    <Box sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 12 }}>
       <Container maxWidth="lg">
-        <Grid container spacing={5} alignItems="flex-start">
-          <Grid item xs={12} md={4} sx={{ textAlign: { xs: "center", md: "left" } }}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              sx={{ textTransform: "uppercase", mb: 3, background: "linear-gradient(90deg, #00b0ff, #00ffc8)", WebkitBackgroundClip: "text", color: "transparent" }}
-            >
-              My Capabilities
-            </Typography>
-          </Grid>
+        {/* Title */}
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          sx={{
+            textTransform: "uppercase",
+            mb: 6,
+            textAlign: "center",
+            background: "linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+          }}
+        >
+          My Skills
+        </Typography>
 
-          <Grid item xs={12} md={8}>
-            <Typography variant="body1" sx={{ mb: 4, color: "#555", fontSize: "1.1rem" }}>
-              I’m always seeking opportunities to learn new skills across Frontend, Backend, UX/UI, and Databases. Below are some of my capabilities:
-            </Typography>
-            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-              {skills.map((skill, i) => (
-                <Chip
-                  key={i}
-                  label={skill}
-                  variant="outlined"
+        {/* Skill Groups */}
+        <Grid container spacing={4}>
+          {Object.entries(skillGroups).map(([category, skills], idx) => (
+            <Grid item xs={12} md={6} key={idx}>
+              <Paper
+                elevation={4}
+                sx={{
+                  p: 4,
+                  borderRadius: "20px",
+                  background: "linear-gradient(145deg, #ffffff, #e0f7fa)",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-8px)",
+                    boxShadow: "0 12px 30px rgba(0,176,255,0.3)",
+                  },
+                }}
+              >
+                {/* Category */}
+                <Typography
+                  variant="h6"
                   sx={{
-                    color: "#444",
-                    borderColor: "#00b0ff",
-                    borderRadius: "50px",
-                    px: 3,
-                    py: 1,
+                    mb: 3,
                     fontWeight: "bold",
-                    fontSize: "0.95rem",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease, transform 0.5s ease",
-                    background: "linear-gradient(145deg, #ffffff, #e0f7fa)",
-                    "&:hover": {
-                      background: "linear-gradient(145deg, #00b0ff, #00ffc8)",
-                      color: "#fff",
-                      transform: "scale(1.15) rotate(-3deg)",
-                      boxShadow: "0 8px 25px rgba(0,176,255,0.4)",
-                    },
-                    animation: `fadeInUp 0.5s ease forwards`,
-                    animationDelay: `${i * 0.05}s`,
-                    opacity: 0,
+                    color: "#00b0ff",
                   }}
-                />
-              ))}
-            </Box>
-          </Grid>
+                >
+                  {category}
+                </Typography>
+
+                {/* Skill list */}
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                  {skills.map((skill, i) => (
+                    <Box
+                      key={i}
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        p: 1.5,
+                        borderRadius: "12px",
+                        background: "rgba(0,176,255,0.05)",
+                        transition: "0.3s",
+                        "&:hover": {
+                          background: "rgba(0,176,255,0.15)",
+                          transform: "scale(1.02)",
+                        },
+                      }}
+                    >
+                      <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                        {skill.name}
+                      </Typography>
+                      <Chip
+                        label={skill.level}
+                        variant="outlined"
+                        sx={{
+                          fontWeight: "bold",
+                          borderRadius: "20px",
+                          px: 2,
+                          ...levelColors[skill.level],
+                        }}
+                      />
+                    </Box>
+                  ))}
+                </Box>
+              </Paper>
+            </Grid>
+          ))}
         </Grid>
       </Container>
-
-      {/* Keyframes */}
-      <style>
-        {`
-          @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-          }
-        `}
-      </style>
     </Box>
   );
 }

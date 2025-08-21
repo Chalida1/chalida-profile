@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
+import { Link } from "react-scroll";   // 👈 ใช้ react-scroll
 import Aboutme from "./Aboutme";
 import Profile2 from "./Profile2";
 import Mycapabilities from "./Mycapabilities";
@@ -13,14 +13,18 @@ import Contact from "./contact";
 import Certificates from "./certificates";
 
 function Profile() {
+  const menuItems = [
+    { label: "About Me", link: "about" },
+    { label: "Certificates", link: "certificates" },
+    { label: "Experience", link: "experience" },
+    { label: "Skills", link: "skills" },
+    { label: "Contact", link: "contact" },
+  ];
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-       
-        <AppBar
-          position="static"
-          sx={{ backgroundColor: "#00b0ff", boxShadow: 2 }}
-        >
+        <AppBar position="static" sx={{ backgroundColor: "#00b0ff", boxShadow: 2 }}>
           <Toolbar>
             <Typography
               variant="h6"
@@ -30,10 +34,15 @@ function Profile() {
               Chalida Manapai
             </Typography>
 
-            {["About Me", "Capabilities", "Experience", "Contact"].map(
-              (item, i) => (
+            {menuItems.map((item, i) => (
+              <Link
+                key={i}
+                to={item.link}   // 👈 ตรงกับ id ของ section
+                smooth={true}    // 👈 เลื่อนนุ่มๆ
+                duration={600}   // 👈 เวลาเลื่อน (ms)
+                offset={-70}     // 👈 กัน header ทับ
+              >
                 <Button
-                  key={i}
                   color="inherit"
                   sx={{
                     mx: 1,
@@ -44,19 +53,21 @@ function Profile() {
                     },
                   }}
                 >
-                  {item}
+                  {item.label}
                 </Button>
-              )
-            )}
+              </Link>
+            ))}
           </Toolbar>
         </AppBar>
       </Box>
-      <Profile2 />
-      <Aboutme />
-      <Certificates />
-      <Myexperience />
-      <Mycapabilities />
-      <Contact />
+
+      {/* ใส่ id ให้ตรงกับ link */}
+      <section id="profile"><Profile2 /></section>
+      <section id="about"><Aboutme /></section>
+      <section id="certificates"><Certificates /></section>
+      <section id="experience"><Myexperience /></section>
+      <section id="skills"><Mycapabilities /></section>
+      <section id="contact"><Contact /></section>
     </>
   );
 }

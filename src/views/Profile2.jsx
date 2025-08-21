@@ -22,13 +22,10 @@ function Profile2() {
             >
               HI, I AM <br /> CHALIDA M.
             </Typography>
-            <Typography variant="body1" sx={{ color: "#444", mb: 3 }}>
-              Frontend Developer from Thailand <br />
-              Passionate about creating modern and user-friendly websites.
-            </Typography>
+            
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Button
+              {/* <Button
                 variant="contained"
                 sx={{
                   backgroundColor: "#00b0ff",
@@ -39,10 +36,10 @@ function Profile2() {
                 }}
               >
                 CONTACT ME
-              </Button>
+              </Button> */}
               
               <IconButton
-                href="https://github.com"
+                href="https://github.com/Chalida1"
                 target="_blank"
                 sx={{
                   backgroundColor: "#222",

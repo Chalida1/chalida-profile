@@ -1,74 +1,63 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import tiw2 from "../assets/tiw2.jpg";
 import Container from "@mui/material/Container";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import certificate from "../assets/certificate.jpg";
 
 function Aboutme() {
   return (
-    <Box sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 10 }}>
-      <Container maxWidth="md">
-        <Grid container spacing={4} alignItems="flex-start">
+    <Box
+      sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 10 }}
+    >
+      <Container maxWidth="lg">
+        <Grid
+          container
+          spacing={4}
+          alignItems="flex-start"
+          justifyContent="space-between"
+        >
           <Grid item xs={12} md={6}>
-            <Typography
-              variant="h3"
-              fontWeight="bold"
-              sx={{ mb: 3, textTransform: "uppercase", color: "#00b0ff" }}
-            >
-              About Me
-            </Typography>
-
-            <Typography
-              variant="body1"
-              sx={{ mb: 4, lineHeight: 1.8, color: "#444" }}
-            >
-              ดิฉันสำเร็จการศึกษาจากสาขาระบบสารสนเทศเพื่อธุรกิจดิจิทัล
-              มหาวิทยาลัยเอเชียอาคเนย์ <br />
-              มีความสนใจในสายงานพัฒนา Software โดยเฉพาะ Web Development ทั้ง
-              Frontend และ Backend
-              <br />
-              <br />
-              จากโครงงานระหว่างเรียนได้พัฒนาระบบจองคอร์สปฏิบัติธรรม (Back-End)
-              ด้วย PHP และ MySQL พร้อมออกแบบ Flowchart และระบบกำหนดสิทธิ์ผู้ใช้
-              ดิฉันพร้อมเรียนรู้เทคโนโลยีใหม่ ๆ ปรับตัวได้ดี
-              และมีความมุ่งมั่นที่จะพัฒนาทักษะเพื่อเติบโตในสายงานนี้
-            </Typography>
-
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-              <Button
-                variant="contained"
-                endIcon={<ArrowForwardIcon />}
-                sx={{
-                  backgroundColor: "#00b0ff",
-                  color: "#fff",
-                  borderRadius: "30px",
-                  px: 3,
-                  fontWeight: "bold",
-                  "&:hover": { backgroundColor: "#0081b3" },
-                }}
+            <Box sx={{ textAlign: "left" }}>
+              <Typography
+                variant="h3"
+                fontWeight="bold"
+                sx={{ mb: 3, textTransform: "uppercase", color: "#00b0ff" }}
               >
-                Download Resume
-              </Button>
+                About Me
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{ mb: 4, lineHeight: 1.8, color: "#444" }}
+              >
+                ดิฉันจบการศึกษาจากมหาวิทยาลัยเอเชียอาคเนย์ <br />
+                ปริญญาตรีบริหารธุรกิจบัณฑิต สาขาระบบสารสนเทศเพื่อธุรกิจดิจิทัล
+                <br />
+                (เกรดเฉลี่ย 3.54 เกียรตินิยมอันดับ1 )
+                <br />
+                มีความสนใจในสายงานพัฒนา Software โดยเฉพาะ Web Development ทั้ง
+                <br />
+                Frontend และ Backend
+                <br />
+                <br />
+                จากโครงงานระหว่างเรียนได้พัฒนาระบบจองคอร์สปฏิบัติธรรม
+                <br />
+                พัฒนาระบบหลังบ้านในส่วนของผู้ดูแลระบบ (Back-End) ด้วยภาษา PHP
+                <br />
+                และฐานข้อมูล MySQL ออกแบบ Flow Chart
+                <br />
+                เพื่อวางโครงสร้างระบบก่อนพัฒนา
+                ช่วยให้ทีมเข้าใจการทำงานของระบบโดยรวม
+                <br />
+                เขียนโค้ดสำหรับระบบล็อกอินและการจัดการสิทธิ์ผู้ใช้(admin/superadmin)<br />
+                 ทดสอบระบบและแก้ไขบั๊กก่อนส่งมอบจริง
+              </Typography>
 
               <IconButton
-                href="https://linkedin.com"
-                target="_blank"
-                sx={{
-                  backgroundColor: "#00b0ff",
-                  color: "#fff",
-                  "&:hover": { backgroundColor: "#0081b3" },
-                }}
-              >
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton
-                href="https://github.com"
+                href="https://github.com/Chalida1"
                 target="_blank"
                 sx={{
                   backgroundColor: "#222",
@@ -81,31 +70,41 @@ function Aboutme() {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          {/* ขวา: ใบรับรอง */}
+          <Grid
+            item
+            xs={12}
+            md="auto"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+            }}
+          >
             <Box
+              component="img"
+              src={certificate}
+              alt="Graduation Certificate"
               sx={{
+                maxWidth: 350,
+                width: "100%",
                 border: "4px solid #00b0ff",
                 borderRadius: 2,
-                overflow: "hidden",
-                width: "100%",
+                objectFit: "cover",
+                mb: 2,
                 transition: "transform 0.3s, box-shadow 0.3s",
                 "&:hover": {
                   transform: "scale(1.03)",
                   boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
                 },
               }}
+            />
+            <Typography
+              variant="subtitle1"
+              sx={{ fontWeight: "bold", color: "#00b0ff", textAlign: "right" }}
             >
-              <Box
-                component="img"
-                src={tiw2}
-                alt="Profile"
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
-                }}
-              />
-            </Box>
+              ใบรับรองจบการศึกษา
+            </Typography>
           </Grid>
         </Grid>
       </Container>
