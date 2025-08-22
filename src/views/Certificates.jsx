@@ -33,7 +33,14 @@ export default function Certificates() {
       <Typography
         variant="h4"
         fontWeight="bold"
-        sx={{ textAlign: "center", mb: 8, color: "#00b0ff" }}
+        sx={{
+          textTransform: "uppercase",
+          mb: 6,
+          textAlign: "center",
+          background: "linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
+          WebkitBackgroundClip: "text",
+          color: "transparent",
+        }}
       >
         My Certificates
       </Typography>
@@ -52,7 +59,6 @@ export default function Certificates() {
                 "&:hover img": { filter: "blur(4px) brightness(0.6)" },
               }}
             >
-          
               <Box
                 component="img"
                 src={cert.image}
@@ -102,9 +108,7 @@ export default function Certificates() {
                 >
                   {cert.description}
                 </Typography>
-                <Typography variant="subtitle2">
-                  {cert.year}
-                </Typography>
+                <Typography variant="subtitle2">{cert.year}</Typography>
               </Box>
             </Box>
           </Grid>

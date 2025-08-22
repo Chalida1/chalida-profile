@@ -11,18 +11,26 @@ import tiw from "../assets/tiw.jpg";
 function Profile2() {
   return (
     <>
-      <Box sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 10 }}>
+      <Box
+        sx={{ background: "linear-gradient(135deg, #e0f7fa, #f0f9ff)", py: 10 }}
+      >
         <Grid container spacing={4} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={6}>
             <Typography
               variant="h3"
               fontWeight="bold"
               gutterBottom
-              color="#00b0ff"
+              sx={{
+                textTransform: "uppercase",
+                mb: 6,
+                textAlign: "center",
+                background: "linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
             >
               HI, I AM <br /> CHALIDA M.
             </Typography>
-            
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               {/* <Button
@@ -37,7 +45,7 @@ function Profile2() {
               >
                 CONTACT ME
               </Button> */}
-              
+
               <IconButton
                 href="https://github.com/Chalida1"
                 target="_blank"

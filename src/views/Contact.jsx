@@ -30,7 +30,12 @@ function Contact() {
           justifyContent="space-between"
         >
           {/* Left Section */}
-          <Grid item xs={12} md={5} sx={{ textAlign: { xs: "center", md: "left" } }}>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{ textAlign: { xs: "center", md: "left" } }}
+          >
             <Typography
               variant="h4"
               fontWeight="bold"
@@ -57,8 +62,14 @@ function Contact() {
 
             <Typography variant="body1" sx={{ mb: 3 }}>
               For more info, here’s my{" "}
-              <Link href="#" underline="hover" sx={{ color: "#c6f62d" }}>
-                resume
+              <Link
+                href="/chalida-profile/Resume_chalidamanapai.pdf"
+                underline="hover"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: "#c6f62d" }}
+              >
+                Resume
               </Link>
             </Typography>
 
@@ -99,8 +110,12 @@ function Contact() {
             </Typography>
           </Grid>
 
-
-          <Grid item xs={12} md={7} sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            sx={{ display: "flex", justifyContent: "flex-end" }}
+          >
             <Box
               sx={{
                 width: "100%",

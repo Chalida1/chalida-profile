@@ -24,7 +24,14 @@ function Aboutme() {
               <Typography
                 variant="h3"
                 fontWeight="bold"
-                sx={{ mb: 3, textTransform: "uppercase", color: "#00b0ff" }}
+                sx={{
+                  textTransform: "uppercase",
+                  mb: 6,
+                  textAlign: "center",
+                  background:"linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 About Me
               </Typography>
@@ -33,27 +40,32 @@ function Aboutme() {
                 variant="body1"
                 sx={{ mb: 4, lineHeight: 1.8, color: "#444" }}
               >
-                ดิฉันจบการศึกษาจากมหาวิทยาลัยเอเชียอาคเนย์ <br />
-                ปริญญาตรีบริหารธุรกิจบัณฑิต สาขาระบบสารสนเทศเพื่อธุรกิจดิจิทัล
+                I graduated from Southeast Asia University <br />
+                with a Bachelor ofBusiness Administration in Digital Business
+                Information Systems
                 <br />
-                (เกรดเฉลี่ย 3.54 เกียรตินิยมอันดับ1 )
-                <br />
-                มีความสนใจในสายงานพัฒนา Software โดยเฉพาะ Web Development ทั้ง
-                <br />
-                Frontend และ Backend
+                (GPA 3.54, First-Class Honors).
                 <br />
                 <br />
-                จากโครงงานระหว่างเรียนได้พัฒนาระบบจองคอร์สปฏิบัติธรรม
+                I am interested in pursuing a career in Software Development,
                 <br />
-                พัฒนาระบบหลังบ้านในส่วนของผู้ดูแลระบบ (Back-End) ด้วยภาษา PHP
+                especially Web Development in both Frontend and Backend.
                 <br />
-                และฐานข้อมูล MySQL ออกแบบ Flow Chart
+                During my academic project, I developed a meditation course
+                booking system.
                 <br />
-                เพื่อวางโครงสร้างระบบก่อนพัฒนา
-                ช่วยให้ทีมเข้าใจการทำงานของระบบโดยรวม
+                I worked on the back-end system for administrators using PHP and
+                a MySQL database.
                 <br />
-                เขียนโค้ดสำหรับระบบล็อกอินและการจัดการสิทธิ์ผู้ใช้(admin/superadmin)<br />
-                 ทดสอบระบบและแก้ไขบั๊กก่อนส่งมอบจริง
+                I also designed flowcharts to structure the system before
+                development, <br />
+                helping the team clearly understand the overall system workflow.
+                <br />
+                I implemented the login system and user role management
+                (admin/superadmin),
+                <br />
+                and conducted system testing and bug fixing before final
+                delivery.
               </Typography>
 
               <IconButton
@@ -103,7 +115,7 @@ function Aboutme() {
               variant="subtitle1"
               sx={{ fontWeight: "bold", color: "#00b0ff", textAlign: "right" }}
             >
-              ใบรับรองจบการศึกษา
+              Certificate of Graduation
             </Typography>
           </Grid>
         </Grid>

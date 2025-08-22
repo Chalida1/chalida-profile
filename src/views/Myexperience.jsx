@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 
-
 function Myexperience() {
   return (
     <>
@@ -33,7 +32,13 @@ function Myexperience() {
               <Typography
                 variant="h4"
                 fontWeight="bold"
-                sx={{ textTransform: "uppercase", color: "#00b0ff", mb: 3 }}
+                sx={{
+                  textTransform: "uppercase",
+                  mb: 6,
+                  background:"linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 My Experience
               </Typography>
