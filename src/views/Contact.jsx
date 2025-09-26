@@ -63,7 +63,7 @@ function Contact() {
             <Typography variant="body1" sx={{ mb: 3 }}>
               For more info, here’s my{" "}
               <Link
-                href="/chalida-profile/Resume_chalidamanapai.pdf"
+                href="/chalida-profile/Resume_chalida.pdf"
                 underline="hover"
                 target="_blank"
                 rel="noopener noreferrer"

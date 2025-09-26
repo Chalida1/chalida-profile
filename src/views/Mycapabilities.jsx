@@ -10,8 +10,8 @@ const skillGroups = {
   ],
   Backend: [
     { name: "PHP", level: "Intermediate" },
-    { name: "Node.js", level: "Beginner" },
-    { name: "RESTful APIs", level: "Beginner" },
+    // { name: "Node.js", level: "Beginner" },
+    // { name: "RESTful APIs", level: "Beginner" },
     { name: "MySQL", level: "Intermediate" },
   ],
   "Tools & Platforms": [
@@ -19,6 +19,11 @@ const skillGroups = {
     { name: "Figma", level: "Beginner" },
   ],
   "Mobile & Others": [{ name: "Flutter", level: "Beginner" }],
+  "Office Tools": [
+    { name: "Microsoft Word", level: "Intermediate" },
+    { name: "Microsoft Excel", level: "Intermediate" },
+    { name: "Canva", level: "Intermediate" },
+  ],
 };
 
 // สีตามระดับ

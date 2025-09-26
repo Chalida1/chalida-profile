@@ -28,7 +28,8 @@ function Aboutme() {
                   textTransform: "uppercase",
                   mb: 6,
                   textAlign: "center",
-                  background:"linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
+                  background:
+                    "linear-gradient(90deg, #00b0ff, #00ffc8, #0066ff)",
                   WebkitBackgroundClip: "text",
                   color: "transparent",
                 }}
@@ -41,31 +42,23 @@ function Aboutme() {
                 sx={{ mb: 4, lineHeight: 1.8, color: "#444" }}
               >
                 I graduated from Southeast Asia University <br />
-                with a Bachelor ofBusiness Administration in Digital Business
-                Information Systems
+                with a Bachelor of Business Administration in Information
+                Systems for Digital Business
                 <br />
                 (GPA 3.54, First-Class Honors).
                 <br />
                 <br />
-                I am interested in pursuing a career in Software Development,
+                I hold a bachelor's degree in Digital Business Information
+                Systems.
+                <br /> I'm a fast learner, adaptable, and detail-oriented.{" "}
                 <br />
-                especially Web Development in both Frontend and Backend.
-                <br />
-                During my academic project, I developed a meditation course
-                booking system.
-                <br />
-                I worked on the back-end system for administrators using PHP and
-                a MySQL database.
-                <br />
-                I also designed flowcharts to structure the system before
-                development, <br />
-                helping the team clearly understand the overall system workflow.
-                <br />
-                I implemented the login system and user role management
-                (admin/superadmin),
-                <br />
-                and conducted system testing and bug fixing before final
-                delivery.
+                I work well with others, possessing excellent coordination and
+                teamwork skills,
+                <br /> based on my experience as a student club committee
+                <br /> member and my participation in numerous volunteer
+                projects. <br />I also possess a high sense of responsibility,
+                <br /> enjoy helping others, and am always open to learning new
+                things.
               </Typography>
 
               <IconButton
